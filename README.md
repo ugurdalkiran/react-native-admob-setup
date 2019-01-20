@@ -43,7 +43,7 @@ allprojects {
 }
 ```
 
-## 3. android/settings.gradle
+## 3. android/app/build.gradle
 
 ```gradle
 dependencies {
