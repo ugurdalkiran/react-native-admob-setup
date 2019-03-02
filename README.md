@@ -47,10 +47,10 @@ allprojects {
 
 ```gradle
 dependencies {
-  compile( project(':react-native-admob') ){
+  implementation( project(':react-native-admob') ){
     exclude group: "com.google.android.gms"
   }
-  compile "com.google.android.gms:play-services-ads:17.1.1"
+  implementation "com.google.android.gms:play-services-ads:17.1.1"
 }
 ```
 
