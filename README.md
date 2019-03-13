@@ -50,7 +50,7 @@ dependencies {
   implementation( project(':react-native-admob') ){
     exclude group: "com.google.android.gms"
   }
-  implementation "com.google.android.gms:play-services-ads:17.1.1"
+  implementation "com.google.android.gms:play-services-ads:17.2.0"
 }
 ```
 
