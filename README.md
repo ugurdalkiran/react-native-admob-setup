@@ -46,11 +46,18 @@ allprojects {
 ## 3. android/app/build.gradle
 
 ```gradle
+android {
+    defaultConfig {
+        multiDexEnabled true
+    }
+}
+
 dependencies {
   implementation( project(':react-native-admob') ){
     exclude group: "com.google.android.gms"
   }
   implementation "com.google.android.gms:play-services-ads:17.2.1"
+  implementation 'com.android.support:multidex:1.0.3'
 }
 ```
 
@@ -64,21 +71,15 @@ dependencies {
     android:value="GOOGLE_ADMOB_APP_ID" />
 
 </application>
+
+APPLICATION_ID - don't change
+GOOGLE_ADMOB_APP_ID - ca-app-pub-******~******
 ```
 
 ## 5. android/app/src/main/java/com/PROJECT_NAME/MainApplication.java
 
 ```java
 import com.sbugert.rnadmob.RNAdMobPackage;
-
-@Override
-protected List<ReactPackage> getPackages() {
-  return Arrays.<ReactPackage>asList(
-    ...
-    new RNAdMobPackage(),
-    ...
-  );
-}
 ```
 
 ## 5. android/app/src/main/java/com/PROJECT_NAME/MainActivity.java
